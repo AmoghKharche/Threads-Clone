@@ -21,11 +21,19 @@ const UserHeader = () => {
         <VStack gap={4} alignItems={"start"}>
             <Flex justifyContent={"space-between"} w={"full"}>
                 <Box>
-                    <Text fontSize={"2xl"} fontWeight={"bold"}>
+                    <Text fontSize={{
+                        base: "xs",
+                        md: "sm",
+                        lg: "2xl"
+                    }} fontWeight={"bold"}>
                         Amogh Kharche
                     </Text>
                     <Flex gap={2} alignItems={"center"}>
-                        <Text fontSize={"sm"}>amoghkharche</Text>
+                        <Text fontSize={{
+                            base: "xs",
+                            md: "sm",
+                            lg: "xl"
+                        }}>amoghkharche</Text>
                         <Text fontSize={"xs"}
                             bg={"gray.dark"}
                             color={"gray.light"}
@@ -40,7 +48,10 @@ const UserHeader = () => {
                     <Avatar
                         name="Amogh Kharche"
                         src="/zuck-avatar.jpg"
-                        size={"xl"} />
+                        size={{
+                            base: "md",
+                            md: "xl"
+                        }} />
                 </Box>
 
             </Flex>
