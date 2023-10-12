@@ -10,8 +10,6 @@ import {
     Stack,
     useColorModeValue,
     Avatar,
-    AvatarBadge,
-    IconButton,
     Center,
 } from '@chakra-ui/react'
 import { SmallCloseIcon } from '@chakra-ui/icons'
@@ -22,6 +20,7 @@ export default function UpdateProfilePage() {
 
             align={'center'}
             justify={'center'}
+            my={6}
         >
             <Stack
                 spacing={4}
@@ -31,40 +30,41 @@ export default function UpdateProfilePage() {
                 rounded={'xl'}
                 boxShadow={'lg'}
                 p={6}
-                my={12}>
+            >
                 <Heading lineHeight={1.1} fontSize={{ base: '2xl', sm: '3xl' }}>
                     User Profile Edit
                 </Heading>
                 <FormControl id="userName">
-                    <FormLabel>User Icon</FormLabel>
+
                     <Stack direction={['column', 'row']} spacing={6}>
                         <Center>
-                            <Avatar size="xl" src="https://bit.ly/sage-adebayo">
-                                <AvatarBadge
-                                    as={IconButton}
-                                    size="sm"
-                                    rounded="full"
-                                    top="-10px"
-                                    colorScheme="red"
-                                    aria-label="remove Image"
-                                    icon={<SmallCloseIcon />}
-                                />
-                            </Avatar>
+                            <Avatar size="xl" src="https://bit.ly/sage-adebayo" />
+
+
                         </Center>
                         <Center w="full">
-                            <Button w="full">Change Icon</Button>
+                            <Button w="full">Change Avatar</Button>
                         </Center>
                     </Stack>
                 </FormControl>
-                <FormControl id="userName" isRequired>
-                    <FormLabel>User name</FormLabel>
+                <FormControl isRequired>
+                    <FormLabel>Full Name</FormLabel>
                     <Input
-                        placeholder="UserName"
+                        placeholder="Amogh Kharche"
                         _placeholder={{ color: 'gray.500' }}
                         type="text"
                     />
                 </FormControl>
-                <FormControl id="email" isRequired>
+                <FormControl isRequired>
+                    <FormLabel>User Name</FormLabel>
+                    <Input
+                        placeholder="amoghkharche"
+                        _placeholder={{ color: 'gray.500' }}
+                        type="text"
+                    />
+                </FormControl>
+
+                <FormControl isRequired>
                     <FormLabel>Email address</FormLabel>
                     <Input
                         placeholder="your-email@example.com"
@@ -72,7 +72,15 @@ export default function UpdateProfilePage() {
                         type="email"
                     />
                 </FormControl>
-                <FormControl id="password" isRequired>
+                <FormControl isRequired>
+                    <FormLabel>Bio</FormLabel>
+                    <Input
+                        placeholder="Your Bio"
+                        _placeholder={{ color: 'gray.500' }}
+                        type="text"
+                    />
+                </FormControl>
+                <FormControl isRequired>
                     <FormLabel>Password</FormLabel>
                     <Input
                         placeholder="password"
@@ -91,11 +99,11 @@ export default function UpdateProfilePage() {
                         Cancel
                     </Button>
                     <Button
-                        bg={'blue.400'}
+                        bg={'green.400'}
                         color={'white'}
                         w="full"
                         _hover={{
-                            bg: 'blue.500',
+                            bg: 'green.500',
                         }}>
                         Submit
                     </Button>
